@@ -89,9 +89,10 @@ Nanologger.prototype._print = function (level) {
 
   var objs = []
   var args = [ null ]
-  var msg = '%c%s ' + emoji + ' %c%s'
+  var msg = '%c%s %s %c%s'
 
   args.push(color(colors.brightBlack), time)
+  args.push(emoji)
   args.push(color(colors.magenta), name)
 
   for (var i = 1, len = arguments.length; i < len; i++) {
